@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Locale | default "en-us" }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Site.Title }}</title>
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "css/all.css" | relURL }}">
+    {{ if .Param "math"}}
+        {{ partialCached "math.html" . }}
+    {{ end }}
+</head>
+<body class="home-page">
+
+    <header class="site-header">
+        <div class="header-inner">
+            
+            <div class="header-left">
+                <a href="{{ .Site.BaseURL }}" class="site-logo">{{ .Site.Title | default "MY NAME" }}</a>
+            </div>
+            
+            <nav class="header-center">
+                <a href="/">Home</a>
+                <a href="/projects">Projects</a>
+            </nav>
+            
+            <div class="header-right">
+                <!-- <form action="/search/" method="get" class="search-form" tabindex="0">
+                    <button type="submit" class="search-btn" aria-label="Run Search"><i class="fas fa-search"></i></button>
+                    <input id="search-input" type="text" name="q" placeholder="Type to search..." aria-label="Search inputs">
+                    <ul id="search-results"></ul>
+
+                </form> -->
+                
+                <button id="theme-toggle" aria-label="Toggle Night Mode"><i class="fas fa-moon"></i></button>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="main-content">
+        {{ block "main" . }}{{ end }}
+    </main>
+    <script src="{{ "js/app.js" | relURL }}"></script>
+</body>
+</html>

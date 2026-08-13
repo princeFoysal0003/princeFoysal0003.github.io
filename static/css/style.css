@@ -1,0 +1,446 @@
+
+/* ==========================================================================
+   1. COLOR MATRIX DESIGN VARIABLES
+   ========================================================================== */
+:root {
+    --bg-main: #f8fafc;
+    --text-main: #0f172a;
+    --text-muted: #94a3b8;
+    
+   /* Mysterious Nav Track Design Parameters */
+    --nav-bg: #f8fafc;          /* Crisp Off-White / Light Slate */
+    --nav-text: #475569;        /* Deep Slate / Dark Charcoal */
+    --nav-logo: #0f172a;        /* Midnight Ink Black */
+    
+    /* Interactive Full-Box Inversion Colors */
+    --nav-accent-bg: #30848a;   /* Electric Neon Cyan */
+    --nav-accent-text: #ffffff; /* Inverts text completely back to dark slate */
+    --header-height: 3em;
+    
+    --search-bg: #e5e9ef;
+    --toggle-btn-bg: #e5e9ef;
+
+    --soc-link-color: #1e0079;
+    --github-color: black;
+
+    --res-fld-color: rgb(13, 69, 190);
+
+    /* Soft, bright pastel gradient */
+    --bg-color: #FAFAFA;
+    --background-image: 
+        radial-gradient(at 10% 20%, #E0F7FA 0px, transparent 50%),
+        radial-gradient(at 90% 50%, #fef1db 0px, transparent 50%),
+        radial-gradient(at 50% 80%, #EDE7F6 0px, transparent 50%);
+    
+    --view-pf-bg-color: black;
+    --view-pf-color:white;
+
+    --reading-text-color: black;
+    --reading-bg-color: white;
+
+}
+
+[data-theme="dark"] {
+    /* --- DARK/NIGHT MODE ENVIRONMENT --- */
+    --bg-main: #0f141c;
+    --text-main: #f1f5f9;
+    --text-muted: #94a3b8;
+    
+    /* Mysterious Navigation States for Night View */
+    --nav-bg: #151b26;          /* Deep Mysterious Midnight Slate */
+    --nav-logo: #ffffff;        /* High-contrast glowing white logo */
+    --nav-text: #94a3b8;        /* Muted night slate text links */
+    
+    /* Full-Box Hover Inversion Colors (Dark Mode) */
+    --nav-accent-bg: #00f2fe;   /* Electric Neon Cyan box fill */
+    --nav-accent-text: #0f141c; /* Inverts text back to dark slate */
+    
+    --search-bg: #1e293b;
+    --toggle-btn-color: white;
+    --toggle-btn-bg: #1e293b;
+
+    --soc-link-color: #ffea00;
+    --github-color:white;
+
+    --res-fld-color: #ffea00;
+
+    /* Deep midnight gradient */
+    --bg-color: #0A0A0C;
+    --background-image: 
+        radial-gradient(at 10% 20%, rgba(0, 187, 212, 0.18) 0px, transparent 50%),
+        radial-gradient(at 90% 10%, rgba(255, 153, 0, 0.169) 0px, transparent 50%),
+        radial-gradient(at 50% 80%, rgba(39, 176, 126, 0.249) 0px, transparent 50%);
+    
+    --view-pf-bg-color: white;
+    --view-pf-color:black;
+
+    
+    --reading-text-color: rgb(239, 239, 239);
+    --reading-bg-color: rgb(72, 72, 72);
+}
+
+
+/* Base Document Canvas Clear Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    /* Change 80px to match the height of your nav bar */
+    scroll-padding-top: calc(var(--header-height) + 15px); 
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+}
+
+.home-page {
+    background-attachment: fixed;
+    min-height: 100vh;
+    transition: background 0.3s ease; /* Makes the color transition smooth when clicked */
+        width: 100%;           /* Explicitly lock width to the viewport */
+    overflow-x: hidden;    /* Cut off any invisible gradient spill */
+    background-color: var(--bg-color);
+    background-image: var(--background-image);
+}
+
+
+/* ==========================================================================
+   2. TRIPLE-COLUMN FIXED NAV-BAR HEADER (ZERO PADDING TRACK)
+   ========================================================================== */
+.site-header {
+    background-color: var(--nav-bg);
+    height: var(--header-height); /* Explicit structural layout baseline height */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    max-width: 1400px; /* Expands broadly across wide monitors */
+    margin: 0 auto;
+}
+
+/* Left Section: Branding Identity Title Placement */
+.header-left {
+    flex: 1 0 25%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    padding-left: 2rem;
+}
+
+.header-left .site-logo {
+    font-weight: 800;
+    font-size: 1.4rem;
+    letter-spacing: -0.03em;
+    color: var(--nav-logo);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* Center Section: Absolute Zero-Padding Link Matrix Grid */
+.header-center {
+    flex: 1 0 50%;
+    display: flex;
+    justify-content: center;
+    gap: 0; /* Links fuse cleanly side-by-side */
+    height: 100%;
+}
+
+.header-center a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--nav-text);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    height: 100%;      /* Stretches box to cover entire header track vertically */
+    padding: 0 1.5rem; /* Generous width click zones */
+    background-color: transparent;
+    
+    /* Smooth transition for both background color and text color simultaneously */
+    transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1), 
+                background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- THE PREMIUM FULL-BOX INVERSION EFFECT --- */
+.header-center a:hover {
+    color: var(--nav-accent-text);     /* Font turns dark midnight slate */
+    background-color: var(--nav-accent-bg); /* Block floods into bright neon electric cyan */
+}
+
+/* Right Section: Action Controls Panel Container */
+.header-right {
+    flex: 1 0 25%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.25rem;
+    padding-right: 3rem;
+    height: 100%;
+}
+
+
+/* Round Switch Circle Container */
+#theme-toggle{
+    background-color: var(--toggle-btn-bg);
+    color: var(--toggle-btn-color);
+    border: none;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+#theme-toggle:hover{
+    background-color: rgb(170, 255, 0); /* Block floods into bright neon electric cyan */
+    color: black;
+}
+
+/* ==========================================================================
+   3. EXPANDABLE SEARCH FRAME & EMOJI TOGGLE INTERFACE
+   ========================================================================== */
+.search-form {
+    display: flex;
+    align-items: center;
+    background-color: var(--search-bg);
+    border-radius: 20px;
+    padding: 0.45rem;
+    width: 38px; /* Initial round circle state matches toggle */
+    height: 38px;
+    overflow: hidden;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.search-form .search-btn {
+    background: none;
+    color:var(--toggle-btn-color);
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.search-form input {
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--nav-accent-bg);
+    font-size: 0.85rem;
+    width: 0;
+    opacity: 0;
+    padding: 0;
+    transition: width 0.3s ease, opacity 0.2s ease;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Slide Open Interaction Mechanics */
+.search-form:hover,
+.search-form:focus-within {
+    width: 200px;
+    padding: 0.45rem 0.85rem;
+    justify-content: flex-start;
+}
+
+.search-form:hover input,
+.search-form:focus-within input {
+    width: 140px;
+    opacity: 1;
+    margin-left: 0.5rem;
+}
+
+
+
+/* Sandboxed Area layout for content built down the line */
+.main-content {
+    max-width: 1400px;
+    margin: 3rem auto;
+    padding: 0 3rem;
+}
+
+.home-container{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+    gap: 8%;                   /* Balanced negative space between info and image */
+}
+
+.home-container .info h1{
+    font-size: 3rem;
+}
+.home-container .info h2{
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+.bio{
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+#research_topics{
+    color:var(--res-fld-color);
+}
+
+
+/* 2. Reduced Viewport (Mobile/Tablet Style) */
+/*=============================================*/
+@media (max-width: 850px) {  /* Triggers when the screen width drops below 850px */
+  .home-container {
+    flex-direction: column-reverse; /* Magic step: Flips layout vertically and puts the photo on top */
+    text-align: center;             /* Centers the text elements for a cleaner layout */
+    gap: 2.5rem;                    /* Safe vertical spacing between photo and text */
+  }
+
+  .details {
+    max-width: 100%;                /* Allows text to utilize full screen width safely */
+  }
+}
+
+#profile_photo{
+    width: 13rem;
+    aspect-ratio: 1/1;
+    border-radius: 15px;
+}
+
+.academic-links a{
+    font-size: 2.7rem;
+}
+
+.academic-links i:hover{
+    color:var(--nav-accent-bg);
+    transform: scale(1.1);
+}
+
+.fab.fa-linkedin{
+    color: #0A66C2;
+}
+.fab.fa-google-scholar{
+    color: rgb(58, 157, 239);
+}
+.fab.fa-orcid{
+    color: #A6CE39;
+}
+.fab.fa-researchgate{
+    color: rgb(99, 230, 190);
+}
+.fab.fa-github{
+    color:var(--github-color);
+}
+
+/*=============================================*/
+
+.view-portfolio{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+    display: inline-block;
+    padding:0.5% 1%;
+    border: 2px solid var(--nav-accent-bg);
+    border-radius:1rem;
+    font-size: 1.1  rem;
+    margin-top: 1rem;
+    margin-bottom: 10rem;
+    color:var(--nav-accent-bg);
+    text-decoration: none;
+    text-align: center;
+     box-shadow: 0px 0px 10px var(--nav-accent-bg);
+      
+    
+}
+
+.view-portfolio:hover{
+    background-color: var(--nav-accent-bg);
+    color:var(--view-pf-color);
+}
+
+.portfolio-container{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+}
+
+.item{
+    border:1px solid var(--nav-accent-bg);
+    border-radius: 10px;
+    padding: 10px;
+    min-height: 400px;
+}
+.span-1{
+    grid-column: span 1;
+}
+.span-2{
+    grid-column: span 2;
+}
+
+
+.list-item{
+    /* background-color: var(--bg-color); */
+    border-radius: 10px;
+    height: 7rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0rem;
+}
+.item-info{
+    flex: 1;
+}
+.item-info .type{
+    padding:2px;
+    background-color: var(--nav-accent-bg);
+    color:var(--nav-accent-text);
+}
+.list-item a{
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+.list-item a:hover{
+    color: var(--nav-accent-bg);
+    text-decoration: underline;
+}
+
+.thumbnail{
+    height: 90%;
+}
+
+.article{
+    /* background-color: var(--reading-bg-color); */
+    color: var(--reading-text-color);
+    padding: 2rem;
+    line-height: 2.3rem;
+    font-size: 1.15rem;
+    text-align: justify;
+}
+.article hr{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.article h1{
+    line-height: 3rem;
+}

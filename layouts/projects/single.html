@@ -1,0 +1,15 @@
+{{ define "main" }}
+<article class="article">
+	<h1>{{ .Title }}</h1>
+	<hr>
+	<p><strong>Authors:</strong> {{ delimit .Params.authors ", " }}</p>
+	<p>Date: {{ .Params.Date}}</p>
+	<br>
+	<p>{{ .Content }}</p>
+	<hr>
+	<p class="share-article">Share on <i class="fas fa-share-square"></i></p>
+	<p class="share-article">
+		<a ><i class="fab fa-facebook"></i></a>
+	</p>
+</article>
+{{ end }}

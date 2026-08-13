@@ -1,0 +1,15 @@
+baseURL = 'https://princeFoysal0003.github.io/'
+locale = 'en-us'
+title = 'Prince Foysal'
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+      [markup.goldmark.renderer]
+        unsafe = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)'], ['$', '$']]
+
+

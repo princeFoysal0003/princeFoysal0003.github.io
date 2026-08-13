@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prince Foysal</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/all.css">
+    
+        
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex.min.css"
+  integrity="sha384-WcoG4HRXMzYzfCgiyfrySxx90XSl2rxY5mnVY5TwtWE6KLrArNKn0T/mOgNL0Mmi"
+  crossorigin="anonymous"
+>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/katex.min.js"
+  integrity="sha384-J+9dG2KMoiR9hqcFao0IBLwxt6zpcyN68IgwzsCSkbreXUjmNVRhPFTssqdSGjwQ"
+  crossorigin="anonymous">
+</script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.25/dist/contrib/auto-render.min.js"
+  integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh"
+  crossorigin="anonymous"
+  onload="renderMathInElement(document.body);">
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: '\\[', right: '\\]', display: true},   
+        {left: '$$', right: '$$', display: true},     
+        {left: '\\(', right: '\\)', display: false},  
+        {left: '$', right: '$', display: false},      
+      ],
+      throwOnError : false
+    });
+  });
+</script>
+    
+</head>
+<body class="home-page">
+
+    <header class="site-header">
+        <div class="header-inner">
+            
+            <div class="header-left">
+                <a href="http://localhost:1313/" class="site-logo">Prince Foysal</a>
+            </div>
+            
+            <nav class="header-center">
+                <a href="/">Home</a>
+                <a href="/projects">Projects</a>
+            </nav>
+            
+            <div class="header-right">
+                
+                
+                <button id="theme-toggle" aria-label="Toggle Night Mode"><i class="fas fa-moon"></i></button>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="main-content">
+        
+<article class="article">
+	<h1>IoT-Based Real-Time Air Quality and Hazard Detection System using Arduiono Uno and ESP8266</h1>
+	<hr>
+	<p><strong>Authors:</strong> Prince Foysal (EEE, RUET), Amit Hasan (EEE, RUET), Naim Sikder (EEE, RUET)</p>
+	<p>Date: 2025-04-13 00:00:00 &#43;0000 UTC</p>
+	<br>
+	<p><h3 id="abstract">Abstract</h3>
+<p>The IOT-based Air Quality Monitoring System is an Arduino based project designed to
+measure and display real-time air quality,air humidity and temperature,the quantity of air
+pollutant such as Carbon Monoxide(CO) in the air.This system is also capable of detecting
+LPG gas in case of gas leakage in house.
+Poor indoor air quality and potential gas leaks can lead to significant health and safety concerns
+in modern households. Traditional methods of monitoring environmental factors such as
+temperature, humidity, and gas levels are often inadequate and inconsistent. This system
+provides real-time data and instant alerts to a mobile app named IOT Cloud, ensuring users are
+always updated, regardless of location. By leveraging low-cost sensors and smart technology,
+the project improves household safety and promotes environmental consciousness in addition
+with smart home automation.
+This project employs an Arduino Uno microcontroller interfaced with an MQ135 gas sensor to
+detect various air pollutants, a DHT11 sensor to measure temperature and humidity,an MQ-06
+LPG gas sensor to detect LPG gas leakage,an MQ-07 carbon monoxide sensor to measure the
+concentration of carbon monoxide in air and an ESP8266 wi-fi module to transmit the data
+through wi-fi and the data will be displayed on IOT CLOUD app. The MQ135 sensor provides
+analog readings corresponding to the concentration of gases like ammonia, benzene, and
+carbon dioxide. These readings are transformed into percentage which indicates the percentage
+of good air.The temperature and humidity data is in degree and percentage respectively.The
+MQ-06 and MQ-07 sensors data are transformed in Parts Per Million(PPM) [1].</p>
+<h3 id="required-components">Required Components</h3>
+<ol style="padding-left: 20px">
+	<li> Arduino Uno</li>
+	<li> ESP8266 Wi-Fi module</li>
+	<li> MQ-07 Carbon Monoxide (CO) Gas Sensor</li>
+	<li> MQ-135 Air Quality ($CO_2, NH_3$, Benzene, and Smoke) Gas Sensor</li>
+	<li> MQ-06 LPG Gas Sensor </li>
+	<li> DHT11 Temperature and Humidity Sensor
+</ol>
+<br>
+<h3 id="circuit-diagram">Circuit Diagram</h3>
+<div style="text-align: center">
+	<img alt="Projcte circuit diagram" src="/images/project02_ckt.jpg" width="900" style="padding:15px" />
+	<p>Fig. 01: Project circuit diagram.</p>
+</div>
+<br>
+<h3 id="project-photos">Project Photos</h3>
+<div style="text-align: center">
+	<img alt="Photo of the complete project." src="/images/project02_photo01.jpg" width="900" style="padding:15px" />
+	<p>Fig. 02: Complete Project.</p>
+</div>
+<div style="text-align: center">
+	<img alt="Photo of the project output." src="/images/project02_photo02.jpg" width="400" style="padding:15px" />
+	<p>Fig. 03: Realtime monitoring in Arduino Cloud App.</p>
+</div>
+<br>
+<h3 id="code-segment">Code Segment</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-C" data-lang="C"><span style="display:flex;"><span>	<span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	Sketch generated by the Arduino IoT Cloud Thing &#34;Air Monitoring&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	https://create.arduino.cc/cloud/things/c5dbfdaf-9d34-4391-8b1c-0d3af0ba8ca0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	Arduino IoT Cloud Variables description
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	The following variables are automatically generated and updated when changes
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	are made to the Thing
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	float airQuality;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	float carbonMonox;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	float lpg;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	CloudPercentage humidity;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	CloudTemperature temperature;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	Variables which are marked as READ/WRITE in the Cloud Thing will also have
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	functions
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	which are called when their values are changed from the Dashboard.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	These functions are generated with the Thing and added at the end of this
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	sketch.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	*/</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;thingProperties.h&#34;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span>	<span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;DHT.h&#34;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span>	<span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;SoftwareSerial.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span>	<span style="color:#75715e">#define DHTpin 4 </span><span style="color:#75715e">// D2
+</span></span></span><span style="display:flex;"><span>	<span style="color:#75715e">#define DHTTYPE DHT11
+</span></span></span><span style="display:flex;"><span>	DHT <span style="color:#a6e22e">dht</span>(DHTpin, DHTTYPE);
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> sensor <span style="color:#f92672">=</span> A0;
+</span></span><span style="display:flex;"><span>	SoftwareSerial <span style="color:#a6e22e">arduinoSerial</span>(D5, D6); <span style="color:#75715e">// RX (D5), TX (D6)
+</span></span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> valA0 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> valA1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Initialize serial and wait for port to open:
+</span></span></span><span style="display:flex;"><span>	Serial.<span style="color:#a6e22e">begin</span>(<span style="color:#ae81ff">9600</span>);
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// This delay gives the chance to wait for a Serial Monitor without blocking
+</span></span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> none is found
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">delay</span>(<span style="color:#ae81ff">1500</span>);
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Defined in thingProperties.h
+</span></span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">initProperties</span>();
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Connect to Arduino IoT Cloud
+</span></span></span><span style="display:flex;"><span>	ArduinoCloud.<span style="color:#a6e22e">begin</span>(ArduinoIoTPreferredConnection);
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	The following function allows you to obtain more information
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	related to the state of network and IoT Cloud connection and errors
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	the higher number the more granular information you’ll get.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	The default is 0 (only errors).
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	Maximum is 4
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	*/</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">setDebugMessageLevel</span>(<span style="color:#ae81ff">2</span>);
+</span></span><span style="display:flex;"><span>	ArduinoCloud.<span style="color:#a6e22e">printDebugInfo</span>();
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>() {
+</span></span><span style="display:flex;"><span>		ArduinoCloud.<span style="color:#a6e22e">update</span>();
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">float</span> hm <span style="color:#f92672">=</span> dht.<span style="color:#a6e22e">readHumidity</span>();
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">float</span> temp <span style="color:#f92672">=</span> dht.<span style="color:#a6e22e">readTemperature</span>();
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">int</span> airQualityValue <span style="color:#f92672">=</span> <span style="color:#a6e22e">analogRead</span>(sensor);airQualityValue <span style="color:#f92672">=</span> <span style="color:#a6e22e">constrain</span>(airQualityValue, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">900</span>);
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">int</span> airQualityPercent <span style="color:#f92672">=</span> <span style="color:#a6e22e">map</span>(airQualityValue, <span style="color:#ae81ff">900</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">100</span>);
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> (arduinoSerial.<span style="color:#a6e22e">available</span>()) {
+</span></span><span style="display:flex;"><span>		String data <span style="color:#f92672">=</span> arduinoSerial.<span style="color:#a6e22e">readStringUntil</span>(<span style="color:#e6db74">&#39;\n&#39;</span>);
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">int</span> commaIndex <span style="color:#f92672">=</span> data.<span style="color:#a6e22e">indexOf</span>(<span style="color:#e6db74">&#39;,&#39;</span>);
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> (commaIndex <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>		valA0 <span style="color:#f92672">=</span> data.<span style="color:#a6e22e">substring</span>(<span style="color:#ae81ff">0</span>, commaIndex).<span style="color:#a6e22e">toInt</span>();
+</span></span><span style="display:flex;"><span>		valA1 <span style="color:#f92672">=</span> data.<span style="color:#a6e22e">substring</span>(commaIndex <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>).<span style="color:#a6e22e">toInt</span>();
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		temperature <span style="color:#f92672">=</span> temp;
+</span></span><span style="display:flex;"><span>		humidity <span style="color:#f92672">=</span> hm;
+</span></span><span style="display:flex;"><span>		airQuality <span style="color:#f92672">=</span> airQualityPercent;
+</span></span><span style="display:flex;"><span>		lpg <span style="color:#f92672">=</span> valA0;
+</span></span><span style="display:flex;"><span>		carbonMonox <span style="color:#f92672">=</span> valA1;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	Since Temperature is READ_WRITE variable, onTemperatureChange() is
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	executed every time a new value is received from IoT Cloud.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	*/</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onTemperatureChange</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Add your code here to act upon Temperature change
+</span></span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	Since Humidity is READ_WRITE variable, onHumidityChange() is
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	executed every time a new value is received from IoT Cloud.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	*/</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onHumidityChange</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Add your code here to act upon Humidity change
+</span></span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	Since AirQuality is READ_WRITE variable, onAirQualityChange() is
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	executed every time a new value is received from IoT Cloud.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	*/</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onAirQualityChange</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Add your code here to act upon AirQuality change
+</span></span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">/*Since CarbonMonox is READ_WRITE variable, onCarbonMonoxChange() is
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	executed every time a new value is received from IoT Cloud.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	*/</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onCarbonMonoxChange</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Add your code here to act upon CarbonMonox change
+</span></span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	Since LPG is READ_WRITE variable, onLPGChange() is
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	executed every time a new value is received from IoT Cloud.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	*/</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onLPGChange</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Add your code here to act upon LPG change
+</span></span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	Since Lpg is READ_WRITE variable, onLpgChange() is
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	executed every time a new value is received from IoT Cloud.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">	*/</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onLpgChange</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Add your code here to act upon Lpg change
+</span></span></span><span style="display:flex;"><span>	}
+</span></span></code></pre></div><p>While the thingProperties.h is the following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-C" data-lang="C"><span style="display:flex;"><span>	<span style="color:#75715e">// Code generated by Arduino IoT Cloud, DO NOT EDIT.
+</span></span></span><span style="display:flex;"><span>	<span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;ArduinoIoTCloud.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span>	<span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;Arduino_ConnectionHandler.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span> DEVICE_LOGIN_NAME[] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;56b54289-fc9e-4993-81dd-cecd5b5bfaa4&#34;</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span> SSID[] <span style="color:#f92672">=</span> SECRET_SSID; <span style="color:#75715e">// Network SSID (name)
+</span></span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span> PASS[] <span style="color:#f92672">=</span> SECRET_OPTIONAL_PASS; <span style="color:#75715e">// Network password(use for WPA, or use as key for WEP)
+</span></span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span> DEVICE_KEY[] <span style="color:#f92672">=</span> SECRET_DEVICE_KEY; <span style="color:#75715e">// Secret device password
+</span></span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onAirQualityChange</span>();
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onCarbonMonoxChange</span>();
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onLpgChange</span>();
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onHumidityChange</span>();
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onTemperatureChange</span>();
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">float</span> airQuality;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">float</span> carbonMonox;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">float</span> lpg;
+</span></span><span style="display:flex;"><span>	CloudPercentage humidity;
+</span></span><span style="display:flex;"><span>	CloudTemperature temperature;<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">initProperties</span>(){
+</span></span><span style="display:flex;"><span>	ArduinoCloud.<span style="color:#a6e22e">setBoardId</span>(DEVICE_LOGIN_NAME);
+</span></span><span style="display:flex;"><span>	ArduinoCloud.<span style="color:#a6e22e">setSecretDeviceKey</span>(DEVICE_KEY);
+</span></span><span style="display:flex;"><span>	ArduinoCloud.<span style="color:#a6e22e">addProperty</span>(airQuality, READWRITE, ON_CHANGE,
+</span></span><span style="display:flex;"><span>	onAirQualityChange);
+</span></span><span style="display:flex;"><span>	ArduinoCloud.<span style="color:#a6e22e">addProperty</span>(carbonMonox, READWRITE, ON_CHANGE,
+</span></span><span style="display:flex;"><span>	onCarbonMonoxChange);
+</span></span><span style="display:flex;"><span>	ArduinoCloud.<span style="color:#a6e22e">addProperty</span>(lpg, READWRITE, ON_CHANGE, onLpgChange);
+</span></span><span style="display:flex;"><span>	ArduinoCloud.<span style="color:#a6e22e">addProperty</span>(humidity, READWRITE, ON_CHANGE, onHumidityChange);
+</span></span><span style="display:flex;"><span>	ArduinoCloud.<span style="color:#a6e22e">addProperty</span>(temperature, READWRITE, ON_CHANGE,
+</span></span><span style="display:flex;"><span>	onTemperatureChange);
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>WiFiConnectionHandler <span style="color:#a6e22e">ArduinoIoTPreferredConnection</span>(SSID, PASS);
+</span></span></code></pre></div></p>
+	<hr>
+	<p class="share-article">Share on <i class="fas fa-share-square"></i></p>
+	<p class="share-article">
+		<a ><i class="fab fa-facebook"></i></a>
+	</p>
+</article>
+
+    </main>
+    <script src="/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Prince Foysal</title>
+    <link>http://localhost:1313/projects/</link>
+    <description>Recent content in Projects on Prince Foysal</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 13 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IoT-Based Real-Time Air Quality and Hazard Detection System using Arduiono Uno and ESP8266</title>
+      <link>http://localhost:1313/projects/project-2/</link>
+      <pubDate>Sun, 13 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/project-2/</guid>
+      <description>&lt;h3 id=&#34;abstract&#34;&gt;Abstract&lt;/h3&gt;&#xA;&lt;p&gt;The IOT-based Air Quality Monitoring System is an Arduino based project designed to&#xA;measure and display real-time air quality,air humidity and temperature,the quantity of air&#xA;pollutant such as Carbon Monoxide(CO) in the air.This system is also capable of detecting&#xA;LPG gas in case of gas leakage in house.&#xA;Poor indoor air quality and potential gas leaks can lead to significant health and safety concerns&#xA;in modern households. Traditional methods of monitoring environmental factors such as&#xA;temperature, humidity, and gas levels are often inadequate and inconsistent. This system&#xA;provides real-time data and instant alerts to a mobile app named IOT Cloud, ensuring users are&#xA;always updated, regardless of location. By leveraging low-cost sensors and smart technology,&#xA;the project improves household safety and promotes environmental consciousness in addition&#xA;with smart home automation.&#xA;This project employs an Arduino Uno microcontroller interfaced with an MQ135 gas sensor to&#xA;detect various air pollutants, a DHT11 sensor to measure temperature and humidity,an MQ-06&#xA;LPG gas sensor to detect LPG gas leakage,an MQ-07 carbon monoxide sensor to measure the&#xA;concentration of carbon monoxide in air and an ESP8266 wi-fi module to transmit the data&#xA;through wi-fi and the data will be displayed on IOT CLOUD app. The MQ135 sensor provides&#xA;analog readings corresponding to the concentration of gases like ammonia, benzene, and&#xA;carbon dioxide. These readings are transformed into percentage which indicates the percentage&#xA;of good air.The temperature and humidity data is in degree and percentage respectively.The&#xA;MQ-06 and MQ-07 sensors data are transformed in Parts Per Million(PPM) [1].&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Designing a Smart Blind Stick Using Arduin Uno</title>
+      <link>http://localhost:1313/projects/project-1/</link>
+      <pubDate>Sun, 23 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/project-1/</guid>
+      <description>&lt;h3 id=&#34;abstract&#34;&gt;Abstract&lt;/h3&gt;&#xA;&lt;p&gt;In this project, we developed a smart stick for visually impaired people using Arduino Uno, ultrasonic sensors, haptic motor, and buzzer.&lt;/p&gt;&#xA;&lt;h3 id=&#34;what-is-a-blind-stick-white-cane&#34;&gt;What Is a Blind Stick (White Cane)?&lt;/h3&gt;&#xA;&lt;p&gt;A blind stick, formally called a white cane, is a stuff used by the blind or visually immpaired people to detect any obstacles surrounding them. It is equiped with ultrasonic sensor which scans any obstacle near the user, and makes sound through buzzer, and makes some vibration through haptic motor at the holding end of the stick.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
