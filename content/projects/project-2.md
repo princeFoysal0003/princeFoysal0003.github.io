@@ -202,6 +202,6 @@ While the thingProperties.h is the following:
 	ArduinoCloud.addProperty(temperature, READWRITE, ON_CHANGE,
 	onTemperatureChange);
 	}
-WiFiConnectionHandler ArduinoIoTPreferredConnection(SSID, PASS);
+	WiFiConnectionHandler ArduinoIoTPreferredConnection(SSID, PASS);
 
 ```
