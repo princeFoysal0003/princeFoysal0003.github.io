@@ -47,7 +47,7 @@ A blind stick, formally called a white cane, is a stuff used by the blind or vis
 
 <br>
 
-### Project Photos
+### Images
 <div style="display: flex; gap: 10px; justify-content: center; padding: 15px">
   <img src="/images/project01_photo01.jpg" alt="First Image" style="max-width: 40%; height: 400px;">
   <img src="/images/project01_photo02.jpg" alt="Second Image" style="max-width: 40%; height: 400px;">

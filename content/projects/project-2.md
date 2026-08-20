@@ -47,7 +47,7 @@ MQ-06 and MQ-07 sensors data are transformed in Parts Per Million(PPM) [1].
 
 <br>
 
-### Project Photos
+### Images
 <div style="text-align: center">
 	<img alt="Photo of the complete project." src="/images/project02_photo01.jpg" width="900" style="padding:15px" />
 	<p>Fig. 02: Complete Project.</p>
