@@ -6,8 +6,15 @@
     <description>Recent content on Prince Foysal</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 13 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Jun 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dual Open-ring Channel MOF-SPR Sensor for Detection of Ultra-wide Range of Analyte RI</title>
+      <link>http://localhost:1313/projects/bachelors-thesis/</link>
+      <pubDate>Thu, 05 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/bachelors-thesis/</guid>
+      <description>&lt;h3 id=&#34;abstract&#34;&gt;Abstract&lt;/h3&gt;&#xA;&lt;p&gt;A microstructured optical fiber (MOF)-based surface flasmon resonane (SPR) sensor with a wide range of analyte refractive index (RI) detection is presented in this paper. Microstructured air holes are used in this sensor geometry to get the expected result. Plasmonic material gold (Au) is used to achieve surface plasmon resonance. Gold is deposited on the surface of two open-ring analyte channels. Finite element method (FEM) is used to charectrized the sensor. Both wavelength and amplitude interrogation methods are used for this sensor. Maximum wavelength sensitivity and resolution are found to be of $6000\ nmRIU^{-1}$ and $1.67\times 10^{-5}\ RIU$ respectively. The maximum amplitude sensitivity and resolution are $253\ RIU^{-1}$ and $1.19\times 10^{-6}\ RIU$ respectively. The proposed sensor has an ultra-wide sensing range of 1.00 to 1.40. This work includes the optimization based on the the gold thickness, air-hole diameters, and pitch. Standard stack-and-draw method is proposed as the fabrication process for this sensor. Due to its wide sensing range, it can be used in gas detection, chemical detection, and biochemical applications.A microstructured optical fiber (MOF)-based surface flasmon resonane (SPR) sensor with a wide range of analyte refractive index (RI) detection is presented in this paper. Microstructured air holes are used in this sensor geometry to get the expected result. Plasmonic material gold (Au) is used to achieve surface plasmon resonance. Gold is deposited on the surface of two open-ring analyte channels. Finite element method (FEM) is used to charectrized the sensor. Both wavelength and amplitude interrogation methods are used for this sensor. Maximum wavelength sensitivity and resolution are found to be of $6000\ nmRIU^{-1}$ and $1.67\times 10^{-5}\ RIU$ respectively. The maximum amplitude sensitivity and resolution are $253\ RIU^{-1}$ and $1.19\times 10^{-6}\ RIU$ respectively. The proposed sensor has an ultra-wide sensing range of $1.00$ to $1.40$. This work includes the optimization based on the the gold thickness, air-hole diameters, and pitch. Standard stack-and-draw method is proposed as the fabrication process for this sensor. Due to its wide sensing range, it can be used in gas detection, chemical detection, and biochemical applications.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>IoT-Based Real-Time Air Quality and Hazard Detection System using Arduiono Uno and ESP8266</title>
       <link>http://localhost:1313/projects/project-2/</link>

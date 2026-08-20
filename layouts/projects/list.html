@@ -6,7 +6,7 @@
 	<div class="item-info">
 		<!-- <em class="type">{{ .Params.type}}</em><br> -->
 		<a href="{{ .RelPermalink }}">{{ .Title }}</a><br>
-		<em>Authors: {{ delimit .Params.authors ", " }}</em><br>
+		<em>Authors: {{ .Params.authors }}</em><br>
 		Date: {{.Date.Format "Jan 02, 2006"}}
 	</div>
 
