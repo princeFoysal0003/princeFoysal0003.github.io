@@ -24,6 +24,7 @@
     --github-color: black;
 
     --res-fld-color: rgb(13, 69, 190);
+    --res-fld-color-2: rgb(209, 82, 3);
 
     /* Soft, bright pastel gradient */
     --bg-color: #FAFAFA;
@@ -63,6 +64,7 @@
     --github-color:white;
 
     --res-fld-color: #ffea00;
+    --res-fld-color-2: rgb(53, 255, 3);
 
     /* Deep midnight gradient */
     --bg-color: #0A0A0C;
@@ -302,6 +304,9 @@ body {
 
 #research_topics{
     color:var(--res-fld-color);
+}
+#research_topics_2{
+    color:var(--res-fld-color-2);
 }
 
 

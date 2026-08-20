@@ -61,7 +61,7 @@ MQ-06 and MQ-07 sensors data are transformed in Parts Per Million(PPM) [1].
 
 <br>
 
-### Arduino and ESP8266 Firmwares
+### ESP8266 Firmware
 
 ```C
 	/*
