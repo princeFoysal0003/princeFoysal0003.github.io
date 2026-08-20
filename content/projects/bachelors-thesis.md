@@ -3,6 +3,7 @@ title: "Dual Open-ring Channel MOF-SPR Sensor for Detection of Ultra-wide Range 
 date: 2025-06-05
 authors:
 - Prince Foysal (EEE, RUET)
+class: "Thesis"
 math: true
 ---
 

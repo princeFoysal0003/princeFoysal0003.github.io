@@ -3,6 +3,7 @@ title: "IoT-Based Real-Time Air Quality and Hazard Detection System using Arduio
 date: 2025-04-13
 authors:
 - Prince Foysal (EEE, RUET), Amit Hasan (EEE, RUET), Naim Sikder (EEE, RUET)
+class: "Project"
 math: true
 ---
 ### Abstract
@@ -60,7 +61,7 @@ MQ-06 and MQ-07 sensors data are transformed in Parts Per Million(PPM) [1].
 
 <br>
 
-### Code Segment
+### Arduino and ESP8266 Firmwares
 
 ```C
 	/*

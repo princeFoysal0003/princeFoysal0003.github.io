@@ -3,6 +3,7 @@ title: "Designing a Smart Blind Stick Using Arduin Uno"
 date: 2023-07-23
 authors:
 - Prince Foysal (EEE, RUET), Amit Hasan (EEE, RUET), Towsif-E-Khuda (EEE, RUET)
+class: "Project"
 math: true
 ---
 ### Abstract
@@ -77,7 +78,7 @@ sensor is the heart of this device. Here, the working principle of smart blind s
 	</li>
 </ol>
 
-### Arduino Code
+### Arduino Firmware
 ```C
 	#define BUZZER_PIN 8 // 8
 	#define VIBRATION_PIN 9 // 9
