@@ -2,31 +2,56 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Prince Foysal</title>
+<<<<<<< HEAD
     <link>http://localhost:1313/projects/</link>
+=======
+    <link>http://localhost:14384/projects/</link>
+>>>>>>> 3e5a4df (Nothing changed)
     <description>Recent content in Projects on Prince Foysal</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 05 Jun 2025 00:00:00 +0000</lastBuildDate>
+<<<<<<< HEAD
     <atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dual Open-ring Channel MOF-SPR Sensor for Detection of Ultra-wide Range of Analyte RI</title>
       <link>http://localhost:1313/projects/bachelors-thesis/</link>
       <pubDate>Thu, 05 Jun 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/projects/bachelors-thesis/</guid>
+=======
+    <atom:link href="http://localhost:14384/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dual Open-ring Channel MOF-SPR Sensor for Detection of Ultra-wide Range of Analyte RI</title>
+      <link>http://localhost:14384/projects/bachelors-thesis/</link>
+      <pubDate>Thu, 05 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:14384/projects/bachelors-thesis/</guid>
+>>>>>>> 3e5a4df (Nothing changed)
       <description>&lt;h3 id=&#34;abstract&#34;&gt;Abstract&lt;/h3&gt;&#xA;&lt;p&gt;A microstructured optical fiber (MOF)-based surface flasmon resonane (SPR) sensor with a wide range of analyte refractive index (RI) detection is presented in this paper. Microstructured air holes are used in this sensor geometry to get the expected result. Plasmonic material gold (Au) is used to achieve surface plasmon resonance. Gold is deposited on the surface of two open-ring analyte channels. Finite element method (FEM) is used to charectrized the sensor. Both wavelength and amplitude interrogation methods are used for this sensor. Maximum wavelength sensitivity and resolution are found to be of $6000\ nmRIU^{-1}$ and $1.67\times 10^{-5}\ RIU$ respectively. The maximum amplitude sensitivity and resolution are $253\ RIU^{-1}$ and $1.19\times 10^{-6}\ RIU$ respectively. The proposed sensor has an ultra-wide sensing range of 1.00 to 1.40. This work includes the optimization based on the the gold thickness, air-hole diameters, and pitch. Standard stack-and-draw method is proposed as the fabrication process for this sensor. Due to its wide sensing range, it can be used in gas detection, chemical detection, and biochemical applications.A microstructured optical fiber (MOF)-based surface flasmon resonane (SPR) sensor with a wide range of analyte refractive index (RI) detection is presented in this paper. Microstructured air holes are used in this sensor geometry to get the expected result. Plasmonic material gold (Au) is used to achieve surface plasmon resonance. Gold is deposited on the surface of two open-ring analyte channels. Finite element method (FEM) is used to charectrized the sensor. Both wavelength and amplitude interrogation methods are used for this sensor. Maximum wavelength sensitivity and resolution are found to be of $6000\ nmRIU^{-1}$ and $1.67\times 10^{-5}\ RIU$ respectively. The maximum amplitude sensitivity and resolution are $253\ RIU^{-1}$ and $1.19\times 10^{-6}\ RIU$ respectively. The proposed sensor has an ultra-wide sensing range of $1.00$ to $1.40$. This work includes the optimization based on the the gold thickness, air-hole diameters, and pitch. Standard stack-and-draw method is proposed as the fabrication process for this sensor. Due to its wide sensing range, it can be used in gas detection, chemical detection, and biochemical applications.&lt;/p&gt;</description>
     </item>
     <item>
       <title>IoT-Based Real-Time Air Quality and Hazard Detection System using Arduiono Uno and ESP8266</title>
+<<<<<<< HEAD
       <link>http://localhost:1313/projects/project-2/</link>
       <pubDate>Sun, 13 Apr 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/projects/project-2/</guid>
+=======
+      <link>http://localhost:14384/projects/project-2/</link>
+      <pubDate>Sun, 13 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:14384/projects/project-2/</guid>
+>>>>>>> 3e5a4df (Nothing changed)
       <description>&lt;h3 id=&#34;abstract&#34;&gt;Abstract&lt;/h3&gt;&#xA;&lt;p&gt;The IOT-based Air Quality Monitoring System is an Arduino based project designed to&#xA;measure and display real-time air quality,air humidity and temperature,the quantity of air&#xA;pollutant such as Carbon Monoxide(CO) in the air.This system is also capable of detecting&#xA;LPG gas in case of gas leakage in house.&#xA;Poor indoor air quality and potential gas leaks can lead to significant health and safety concerns&#xA;in modern households. Traditional methods of monitoring environmental factors such as&#xA;temperature, humidity, and gas levels are often inadequate and inconsistent. This system&#xA;provides real-time data and instant alerts to a mobile app named IOT Cloud, ensuring users are&#xA;always updated, regardless of location. By leveraging low-cost sensors and smart technology,&#xA;the project improves household safety and promotes environmental consciousness in addition&#xA;with smart home automation.&#xA;This project employs an Arduino Uno microcontroller interfaced with an MQ135 gas sensor to&#xA;detect various air pollutants, a DHT11 sensor to measure temperature and humidity,an MQ-06&#xA;LPG gas sensor to detect LPG gas leakage,an MQ-07 carbon monoxide sensor to measure the&#xA;concentration of carbon monoxide in air and an ESP8266 wi-fi module to transmit the data&#xA;through wi-fi and the data will be displayed on IOT CLOUD app. The MQ135 sensor provides&#xA;analog readings corresponding to the concentration of gases like ammonia, benzene, and&#xA;carbon dioxide. These readings are transformed into percentage which indicates the percentage&#xA;of good air.The temperature and humidity data is in degree and percentage respectively.The&#xA;MQ-06 and MQ-07 sensors data are transformed in Parts Per Million(PPM) [1].&lt;/p&gt;</description>
     </item>
     <item>
       <title>Designing a Smart Blind Stick Using Arduin Uno</title>
+<<<<<<< HEAD
       <link>http://localhost:1313/projects/project-1/</link>
       <pubDate>Sun, 23 Jul 2023 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/projects/project-1/</guid>
+=======
+      <link>http://localhost:14384/projects/project-1/</link>
+      <pubDate>Sun, 23 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:14384/projects/project-1/</guid>
+>>>>>>> 3e5a4df (Nothing changed)
       <description>&lt;h3 id=&#34;abstract&#34;&gt;Abstract&lt;/h3&gt;&#xA;&lt;p&gt;In this project, we developed a smart stick for visually impaired people using Arduino Uno, ultrasonic sensors, haptic motor, and buzzer.&lt;/p&gt;&#xA;&lt;h3 id=&#34;what-is-a-blind-stick-white-cane&#34;&gt;What Is a Blind Stick (White Cane)?&lt;/h3&gt;&#xA;&lt;p&gt;A blind stick, formally called a white cane, is a stuff used by the blind or visually immpaired people to detect any obstacles surrounding them. It is equiped with ultrasonic sensor which scans any obstacle near the user, and makes sound through buzzer, and makes some vibration through haptic motor at the holding end of the stick.&lt;/p&gt;</description>
     </item>
   </channel>

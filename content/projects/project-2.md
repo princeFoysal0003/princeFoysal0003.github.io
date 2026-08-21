@@ -42,7 +42,7 @@ MQ-06 and MQ-07 sensors data are transformed in Parts Per Million(PPM) [1].
 
 ### Circuit Diagram
 <div style="text-align: center">
-	<img alt="Projcte circuit diagram" src="/images/project02_ckt.jpg" width="900" style="padding:15px" />
+	<img alt="Projcte circuit diagram" src="/images/project02_ckt.jpg" width="900" style="width:90%; padding:15px" />
 	<p>Fig. 01: Project circuit diagram.</p>
 </div>
 
@@ -50,12 +50,12 @@ MQ-06 and MQ-07 sensors data are transformed in Parts Per Million(PPM) [1].
 
 ### Images
 <div style="text-align: center">
-	<img alt="Photo of the complete project." src="/images/project02_photo01.jpg" width="900" style="padding:15px" />
+	<img alt="Photo of the complete project." src="/images/project02_photo01.jpg" style="width:90%; padding:15px" />
 	<p>Fig. 02: Complete Project.</p>
 </div>
 
 <div style="text-align: center">
-	<img alt="Photo of the project output." src="/images/project02_photo02.jpg" width="400" style="padding:15px" />
+	<img alt="Photo of the project output." src="/images/project02_photo02.jpg" style="width:50%; padding:15px" />
 	<p>Fig. 03: Realtime monitoring in Arduino Cloud App.</p>
 </div>
 

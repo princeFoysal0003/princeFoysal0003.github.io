@@ -13,7 +13,7 @@ In this project, we developed a smart stick for visually impaired people using A
 A blind stick, formally called a white cane, is a stuff used by the blind or visually immpaired people to detect any obstacles surrounding them. It is equiped with ultrasonic sensor which scans any obstacle near the user, and makes sound through buzzer, and makes some vibration through haptic motor at the holding end of the stick. 
 
 <div style="text-align: center">
-	<img alt="A blind man holding a smart cane." src="/images/blind_man_with_cane.jpg" width="400" style="padding:15px" />
+	<img alt="A blind man holding a smart cane." src="/images/blind_man_with_cane.jpg" style="  width:80%;padding:15px" />
 	<p>Fig. 01: A blind mand using his smart cane to detect obstacles in front him. <a target="_blank" href="https://www.skyfilabs.com/project-ideas/smart-walking-cane">[1]</a></p>
 </div>
 
@@ -37,12 +37,12 @@ A blind stick, formally called a white cane, is a stuff used by the blind or vis
 ### Circuit Diagram
 
 <div style="text-align: center">
-	<img alt="Projcte circtui diagram" src="/images/project01_ckt.jpg" width="900" style="padding:15px" />
+	<img alt="Projcte circtui diagram" src="/images/project01_ckt.jpg" style="width:80%; padding:15px" />
 	<p>Fig. 02: Project circuit diagram drawn in Tinkercad software</p>
 </div>
 
 <div style="text-align: center">
-	<img alt="Projcte prototype drawn in Tinkercad" src="/images/project01_prot.jpg" width="900" style="padding:15px" />
+	<img alt="Projcte prototype drawn in Tinkercad" src="/images/project01_prot.jpg" style="width:80%;padding:15px" />
 	<p>Fig. 03: Project prototype drawn in Tinkercad software</p>
 </div>
 
